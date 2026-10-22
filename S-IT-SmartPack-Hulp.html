@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-IT-SmartPack – Help</title>
+<link rel="icon" type="image/x-icon" href="s-it-icon140.ico">
+<style>
+:root{--primary:#2C3E50;--red:#E74C3C;--logo:#E63946;--blue:#1F5F99;--green:#1E7A46;
+--orange:#A4520C;--bg:#F4F5F7;--card:#FFFFFF;--line:#E5E7EB;--text:#1F2A37;--text2:#4B5563;
+--text3:#6B7280;--tint-g:#EEF6F0;--tint-b:#EEF3FA;--tint-w:#F8F3EA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Segoe UI",system-ui,sans-serif}
+header{background:var(--primary);color:#ECF0F1;padding:18px 16px}
+.wrap{max-width:920px;margin:0 auto}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between}
+.logo{font-size:26px;font-weight:700;letter-spacing:-.3px}
+.logo span{color:var(--logo)}
+.sub{color:#BDC9D4;font-size:14px;margin-top:2px}
+.lang a{color:#ECF0F1;text-decoration:none;margin-left:12px;font-size:14px;opacity:.75}
+.lang a.on{opacity:1;font-weight:600;border-bottom:2px solid var(--logo)}
+.divider{height:3px;background:var(--red)}
+main{padding:24px 16px 8px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:21px;margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--red);
+display:inline-block}
+h3{font-size:16px;margin:18px 0 6px}
+p{margin:8px 0}
+.lead{color:var(--text2);margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+.card.g{background:var(--tint-g);border-color:#D3E6D8}
+.card.b{background:var(--tint-b);border-color:#D8E2EF}
+.card.w{background:var(--tint-w);border-color:#E6DAC4}
+.toc{columns:2;column-gap:28px;margin:0;padding-left:18px}
+.toc li{margin:2px 0}
+.toc a,main a{color:var(--blue)}
+ul,ol{margin:8px 0;padding-left:22px}
+li{margin:4px 0}
+.ui{font-weight:600;white-space:nowrap}
+code,.path{font-family:Consolas,"Cascadia Mono",monospace;font-size:13.5px;background:#EEF0F2;
+padding:1px 5px;border-radius:4px;word-break:break-all}
+.note{border-left:0;color:var(--text2);font-size:14px}
+.plus li{margin:7px 0}
+.plus b{color:var(--primary)}
+.top{font-size:13px;margin-top:4px}
+footer{color:var(--text3);font-size:13px;text-align:center;padding:26px 16px 30px}
+footer a{color:var(--blue);margin:0 6px}
+.path{display:block;margin:4px 0;padding:6px 8px;overflow-wrap:anywhere}
+@media (max-width:640px){.toc{columns:1}.ui{white-space:normal}.brand{display:block}.lang{margin-top:6px}.lang a{margin:0 12px 0 0}}
+@media print{header{background:#fff;color:#000}.lang{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap brand">
+  <div><div class="logo"><span>S-IT</span> SmartPack</div><div class="sub">Mappen inpakken, uitpakken en veilig verwijderen</div></div>
+  <div class="lang"><a href="S-IT-SmartPack-Hilfe.html">Deutsch</a> <a href="S-IT-SmartPack-Help.html">English</a> <a href="S-IT-SmartPack-Hulp.html" class=on>Nederlands</a></div>
+</div></header>
+<div class="divider"></div>
+<main class="wrap">
+
+<h1>Help bij S-IT-SmartPack</h1>
+<p class="lead">SmartPack voegt mappen samen tot een ISO-bestand of een 7z- of ZIP-archief, pakt
+ze weer uit en verwijdert gegevens die niet meer nodig zijn zo, dat ze niet te herstellen zijn.
+Terugkerende taken staan op snelkeuzeknoppen en starten met één klik.</p>
+
+<div class="card">
+<ul class="toc">
+<li><a href="#overzicht">Overzicht</a></li>
+<li><a href="#meer">Wat SmartPack meer biedt dan een 7-Zip-interface</a></li>
+<li><a href="#iso">ISO maken</a></li>
+<li><a href="#archief">Archief maken</a></li>
+<li><a href="#snelkeuze">Snelkeuze</a></li>
+<li><a href="#uitpakken">Archief uitpakken</a></li>
+<li><a href="#verwijderen">Veilig verwijderen</a></li>
+<li><a href="#controleren">Resultaat controleren en overgeslagen bestanden</a></li>
+<li><a href="#instellingen">Instellingen</a></li>
+<li><a href="#bestanden">Programmamap en bestanden</a></li>
+<li><a href="#licenties">7-Zip en oscdimg.exe</a></li>
+</ul>
+</div>
+
+<h2 id="overzicht">Overzicht</h2>
+<p>Het venster bestaat uit drie delen:</p>
+<ul>
+<li><b>Links de zijbalk</b> met de vier pagina's <span class="ui">ISO maken</span>,
+<span class="ui">Archief maken</span>, <span class="ui">Archief uitpakken</span> en
+<span class="ui">Veilig verwijderen</span>. Onderaan staan <span class="ui">Instellingen</span>
+en <span class="ui">Help</span>.</li>
+<li><b>In het midden</b> de kaarten van de gekozen pagina en daaronder de regel met de startknop
+(bijvoorbeeld <span class="ui">ISO maken</span>), <span class="ui">Annuleren</span>, de voortgang
+en de knop <span class="ui">Log</span>.</li>
+<li><b>Rechts de snelkeuze</b> met tien knoppen. Die verschijnt bij
+<span class="ui">ISO maken</span> en <span class="ui">Archief maken</span>.</li>
+</ul>
+<p>Boven de voortgangsbalk staan het aantal bestanden en de grootte van de lopende bewerking.
+De toets <span class="ui">ESC</span> annuleert een lopende bewerking. Na elke bewerking verschijnt
+een resultaatvenster met de knop <span class="ui">Doelmap openen</span>.</p>
+
+<h2 id="meer">Wat SmartPack meer biedt dan een 7-Zip-interface</h2>
+<div class="card w">
+<ul class="plus">
+<li><b>Snelkeuze met één klik:</b> Tien knoppen bewaren vaste taken met bronmappen, doelmap,
+formaat en desgewenst een wachtwoord. Elke run krijgt datum en tijd in de bestandsnaam, zo
+ontstaan gedateerde versies naast elkaar.</li>
+<li><b>ISO-bestanden uit mappen:</b> Ook meerdere mappen van verschillende stations komen in één
+ISO-bestand. Een dubbelklik koppelt het in Verkenner als station, op elke Windows-pc zonder extra
+software.</li>
+<li><b>Terughalen via snelkeuze:</b> De nieuwste versie wordt zelf gevonden, het opgeslagen
+wachtwoord gebruikt en de inhoud desgewenst naar de oorspronkelijke locatie teruggeschreven –
+voor archieven en ISO-bestanden.</li>
+<li><b>Opgeslagen wachtwoorden versleuteld:</b> Een wachtwoord in de snelkeuze is alleen leesbaar
+voor de Windows-gebruiker die het heeft opgeslagen, en alleen op deze pc. Dat geldt alleen voor
+de snelkeuze: het archief zelf is met het wachtwoord op elke pc uit te pakken.</li>
+<li><b>Resultaat controleren:</b> Desgewenst wordt elk archief volledig gelezen en elk bestand aan
+de hand van zijn controlesom gecontroleerd. Bij archief en ISO wordt bovendien gecontroleerd of
+elk bestand van de bronmappen aanwezig is.</li>
+<li><b>Vergrendelde en onleesbare bestanden:</b> Ze worden overgeslagen, de bewerking gaat door.
+Aan het eind staan ze naar soort gescheiden in het resultaatvenster, bij onleesbare bestanden
+met een verwijzing naar S-IT-SSD-Check.</li>
+<li><b>Controles vóór de start:</b> vrije ruimte, de 4-GB-grens van FAT32, een doelmap binnen de
+bron en bronmappen met dezelfde naam worden herkend voordat er iets wordt geschreven.</li>
+<li><b>Veilig verwijderen:</b> Mappen en bestanden, zoals oude ISO-, 7z- en ZIP-versies, worden
+één keer volledig overschreven en verwijderd. Bronmappen van de snelkeuze, Windows-, programma-
+en gebruikersmappen zijn vergrendeld; bevestigen gaat met een willekeurig getal.</li>
+</ul>
+</div>
+
+<h2 id="iso">ISO maken</h2>
+<p>Een ISO-bestand is een kopie van mappen in één bestand. Windows koppelt het met een dubbelklik
+als station; de inhoud is dan te lezen zoals van een cd of een USB-stick. Voor deze pagina is het
+Microsoft-bestand <code>oscdimg.exe</code> in de programmamap nodig –
+<a href="S-IT-SmartPack-oscdimg-NL.html">zo verkrijgt u oscdimg.exe</a>.</p>
+<div class="card g">
+<h3>Bronnen</h3>
+<p>Met <span class="ui">Toevoegen</span> komen mappen in de lijst, met
+<span class="ui">Verwijderen</span> of de toets <span class="ui">Del</span> worden gemarkeerde
+items weer verwijderd. Meerdere bronmappen verschijnen in het ISO-bestand elk als eigen map. Een
+heel station kan als enige bron worden gekozen.</p>
+</div>
+<div class="card b">
+<h3>Doel</h3>
+<ul>
+<li><span class="ui">Doelmap</span>: hier wordt het ISO-bestand gemaakt.</li>
+<li><span class="ui">ISO-naam</span>: wordt gevormd uit de mapnaam met datum en tijd en kan
+worden gewijzigd. Bij meerdere bronmappen luidt hij „Verzameling”.</li>
+<li><span class="ui">Volumenaam</span>: de naam die Verkenner bij het koppelen toont, maximaal
+32 tekens. Umlauten worden daarvoor omgezet.</li>
+</ul>
+</div>
+<p><b>Meerdere bronmappen:</b> Ze worden eerst naar een tussenmap gekopieerd, die daarna weer
+wordt verwijderd. SmartPack zet die bij voorkeur op het snelle systeemstation als daar genoeg
+ruimte is, anders in de doelmap. Waar hij staat, ziet u tijdens de run boven de voortgangsbalk,
+bijvoorbeeld „Tussenmap op C:\”.</p>
+<p><b>Vóór de start gecontroleerd:</b> Is het doelstation met FAT32 geformatteerd en de bron
+groter dan 4 GB, dan verschijnt een melding – FAT32 staat geen grotere bestanden toe. Ook wordt
+gecontroleerd of er genoeg ruimte vrij is. Staat er in de doelmap al een bestand met dezelfde
+naam, dan vraagt SmartPack of het moet worden vervangen.</p>
+<p>Onderaan de pagina toont een regel of <code>oscdimg.exe</code> aanwezig is. Ontbreekt het
+bestand, dan opent een klik op deze regel de handleiding om het te verkrijgen. Met
+<span class="ui">Als snelkeuze opslaan</span> rechts daarnaast komt de selectie op een
+snelkeuzeknop.</p>
+
+<h2 id="archief">Archief maken</h2>
+<p>Een archief voegt mappen samen in één gecomprimeerd bestand. SmartPack gebruikt daarvoor het
+hoogste compressieniveau van 7-Zip.</p>
+<div class="card b">
+<ul>
+<li><span class="ui">Formaat</span>: 7z of ZIP. ZIP opent onder Windows zonder extra software;
+7z is kleiner en versleutelt met wachtwoord ook de bestandsnamen.</li>
+<li><span class="ui">Automatische naam</span>: de archiefnaam wordt gevormd uit mapnaam, datum en
+tijd. Zonder vinkje is hij vrij te kiezen via <span class="ui">Opslaan als …</span>.</li>
+<li><span class="ui">Wachtwoord</span>: versleutelt het archief. Het wachtwoord wordt niet
+opgeslagen en is nodig om uit te pakken.</li>
+<li><span class="ui">Bron verwijderen nadat het archief is gemaakt</span>: de bronmappen worden
+pas na een geslaagde afronding verwijderd, na een bevestiging. Ontbreken er bestanden in het
+archief of is de controle niet geslaagd, dan blijft de bron ongewijzigd.</li>
+</ul>
+</div>
+<p>Bestanden die op dat moment in een ander programma geopend zijn, worden zo mogelijk
+meegenomen.</p>
+
+<h2 id="snelkeuze">Snelkeuze</h2>
+<p>De snelkeuze rechts in het venster bewaart maximaal tien vaste taken – bijvoorbeeld
+„Contracten [7z]” of „Stick64 [ISO]”.</p>
+<ul>
+<li><b>Linksklik</b> start de taak meteen. Het bestand krijgt datum en tijd in de naam.</li>
+<li><b>Rechtsklik</b> opent het venster <span class="ui">Snelkeuze toewijzen</span>.</li>
+<li>Staat de muis op een knop, dan toont een tip bronnen, doel, formaat en wachtwoord.</li>
+</ul>
+<div class="card w">
+<h3>Snelkeuze toewijzen</h3>
+<ul>
+<li><span class="ui">Opschrift</span>: maximaal 16 tekens; het formaat wordt tussen vierkante
+haken toegevoegd.</li>
+<li><span class="ui">Formaat</span>, <span class="ui">Bronmappen</span> en
+<span class="ui">Doelmap</span> zoals op de pagina's ISO en archief.</li>
+<li><span class="ui">Wachtwoord</span> (alleen 7z en ZIP): blijft het veld leeg, dan vraagt
+SmartPack bij elke start om het wachtwoord. Een ingevuld wachtwoord wordt versleuteld opgeslagen
+en is alleen onder deze Windows-gebruiker op deze pc leesbaar. Op een andere pc wordt het
+gevraagd. Deze binding geldt alleen voor de in de snelkeuze opgeslagen kopie van het wachtwoord:
+de archieven zijn met het wachtwoord op elke pc uit te pakken, met SmartPack, 7-Zip of een ander
+inpakprogramma. Noteer het wachtwoord daarom ook op een veilige plek.</li>
+<li><span class="ui">Toewijzing verwijderen</span> maakt de knop weer vrij.</li>
+</ul>
+</div>
+<p>Sneller gaat het vanaf de pagina's: zijn bronnen en doel ingevuld, dan zet
+<span class="ui">Als snelkeuze opslaan</span> ze op een knop; een klein venster vraagt op
+welke.</p>
+<p>Bij een snelkeuze met één bronmap heet het bestand zoals die map, bij meerdere bronmappen zoals
+het opschrift. Is een station niet aangesloten, dan meldt SmartPack dat vóór de start. Grijze
+tekst betekent: vrij, of een ISO-snelkeuze terwijl de ISO-functie is uitgeschakeld.</p>
+
+<h2 id="uitpakken">Archief uitpakken</h2>
+<p>Deze pagina pakt 7z-, ZIP- en ISO-bestanden uit.</p>
+<div class="card g">
+<h3>Uit de snelkeuze</h3>
+<p>Kiest u hier een snelkeuze, dan vult SmartPack de nieuwste versie van die taak in en gebruikt
+het opgeslagen wachtwoord. Oudere versies zijn te kiezen via <span class="ui">Bladeren …</span>.
+Wordt een bestand van een snelkeuze met de hand gekozen, dan herkent SmartPack de snelkeuze
+zelf.</p>
+</div>
+<div class="card b">
+<h3>Archief en doel</h3>
+<p>Onder <span class="ui">Archief / ISO</span> staat het bestand dat wordt uitgepakt.</p>
+<ul>
+<li>Een vrij gekozen <span class="ui">Doelmap</span>, bijvoorbeeld op een extern station.</li>
+<li>Of <span class="ui">Terug naar de oorspronkelijke locatie</span>: de inhoud wordt
+teruggeschreven naar waar de bronmappen van de snelkeuze staan. Bestaande bestanden met dezelfde
+naam worden daarbij overschreven; SmartPack vraagt dat eerst. Staan de bronmappen op
+verschillende plaatsen, dan is deze keuze niet mogelijk.</li>
+</ul>
+</div>
+<p>Zonder snelkeuze voert u een wachtwoord in via het vinkje
+<span class="ui">Wachtwoord</span>.</p>
+
+<h2 id="verwijderen">Veilig verwijderen</h2>
+<p>Deze pagina verwijdert mappen en bestanden zo, dat ze niet te herstellen zijn – bijvoorbeeld
+oude ISO-, 7z- en ZIP-versies.</p>
+<div class="card b">
+<ul>
+<li><span class="ui">Map …</span> en <span class="ui">Bestanden …</span> vullen de lijst
+<span class="ui">Te verwijderen</span>; meerdere bestanden zijn in één keer te kiezen met Ctrl of
+Shift.</li>
+<li>Onder de lijst staat of alle items kunnen worden verwijderd of welk item vergrendeld is.</li>
+<li>Na <span class="ui">Veilig verwijderen …</span> worden omvang en items getoond. Ter
+bevestiging voert u een getal van vier cijfers in; pas dan is
+<span class="ui">Definitief verwijderen</span> mogelijk.</li>
+</ul>
+</div>
+<p><b>Werkwijze:</b> Elk bestand wordt één keer volledig met willekeurige gegevens overschreven,
+krijgt een willekeurige naam en wordt daarna verwijderd. Het duurt ongeveer even lang als het
+eenmaal kopiëren van dezelfde hoeveelheid gegevens.</p>
+<p><b>Vergrendeld</b> zijn de bronmappen van de snelkeuze en de mappen die ze bevatten, hele
+stations, Windows-, programma- en gebruikersmappen en de programmamap van SmartPack. Snelkoppelingen
+en koppelingen worden alleen als verwijzing verwijderd; hun doel blijft ongewijzigd.</p>
+<p class="note">Technisch is het zo: SSD's, USB-sticks en geheugenkaarten verdelen schrijfacties
+zelf over andere geheugencellen. Het overschrijven bereikt daar niet gegarandeerd elke oude kopie.
+Volledig beschermd zijn gegevens die versleuteld waren opgeslagen. SmartPack toont deze melding
+zodra een item op zo'n opslag staat.</p>
+
+<h2 id="controleren">Resultaat controleren en overgeslagen bestanden</h2>
+<div class="card">
+<h3>Resultaat controleren</h3>
+<p>Het vinkje <span class="ui">Resultaat na het maken controleren</span> in de instellingen geldt
+voor ISO, archief en snelkeuze:</p>
+<ul>
+<li>Archieven worden volledig gelezen; elk bestand wordt aan de hand van zijn controlesom
+gecontroleerd. Dat duurt ongeveer even lang als één keer uitpakken.</li>
+<li>Bij archieven en ISO-bestanden wordt bovendien gecontroleerd of elk bestand van de bronmappen
+in het resultaat staat. Bij ISO-bestanden duurt dat maar enkele seconden.</li>
+</ul>
+<p>Het resultaatvenster toont dan bijvoorbeeld „Controle geslaagd: 1.234 bestanden, 4,2 GB”.
+Is de controle niet geslaagd, dan worden de ontbrekende bestanden genoemd en vindt een gekozen
+verwijdering van de bron niet plaats.</p>
+</div>
+<div class="card">
+<h3>Vergrendelde en onleesbare bestanden</h3>
+<p>Kan een bronbestand niet worden gelezen, dan slaat SmartPack het over en gaat verder. Maakt
+een leesactie 20 seconden geen voortgang, dan geldt het bestand als onleesbaar. Aan het eind
+staan de overgeslagen bestanden apart als</p>
+<ul>
+<li><b>vergrendeld of zonder toegangsrecht</b> – bijvoorbeeld geopend door een programma, en</li>
+<li><b>niet leesbaar, mogelijk defect</b>.</li>
+</ul>
+<p>Onleesbare bestanden kunnen wijzen op een station dat achteruitgaat. Het resultaatvenster
+biedt dan de knop <span class="ui">S-IT-SSD-Check</span>, die naar de
+<a href="https://sattlerit.github.io/sit-ssd-check/">pagina van S-IT-SSD-Check</a> leidt. De
+volledige lijst staat in het log.</p>
+<p class="note">Bij het maken van archieven leest 7-Zip de bestanden zelf. Blijft een leesactie
+daar hangen, dan helpt <span class="ui">Annuleren</span>; de overgeslagen bestanden worden toch
+bepaald en gemeld.</p>
+</div>
+
+<h2 id="instellingen">Instellingen</h2>
+<p>Het venster opent via <span class="ui">Instellingen</span> in de zijbalk of met een klik op de
+vlag rechtsonder.</p>
+<ul>
+<li><span class="ui">Weergavegrootte</span>: automatisch volgens Windows of vast van 90 tot
+150 %.</li>
+<li><span class="ui">Taal</span>: Deutsch, English, Nederlands.</li>
+<li><span class="ui">Kleurenschema</span>: vijf op elkaar afgestemde schema's van licht tot
+donker; <span class="ui">Kleuren herstellen</span> kiest weer „Gedempt”.</li>
+<li><span class="ui">Resultaat controleren</span>: zie hierboven.</li>
+<li><span class="ui">ISO-functie</span>: uitgeschakeld worden de pagina
+<span class="ui">ISO maken</span> en de keuze ISO bij het toewijzen van de snelkeuze verborgen.
+Toegewezen ISO-snelkeuzes blijven bewaard. Ontbreekt <code>oscdimg.exe</code> bij de eerste
+start, dan biedt SmartPack aan de functie uit te schakelen.</li>
+</ul>
+<p>Weergavegrootte, taal en kleurenschema worden van kracht na een herstart van het programma;
+SmartPack biedt die meteen aan.</p>
+
+<h2 id="bestanden">Programmamap en bestanden</h2>
+<div class="card">
+<ul>
+<li><code>S-IT-SP-Start.exe</code> start het programma.</li>
+<li><code>S-IT-SmartPack_Prog</code> bevat het programma, <code>7z.exe</code> en
+<code>7z.dll</code>, de taalpakketten en deze help. Ook <code>oscdimg.exe</code> hoort hier.</li>
+<li><code>S-IT-SmartPack.ini</code> in dezelfde map bewaart instellingen en snelkeuze.</li>
+<li><code>S-IT-SmartPack.log</code> legt elke bewerking vast met opdracht, duur en eventueel de
+overgeslagen bestanden; de knop <span class="ui">Log</span> opent het bestand.</li>
+<li><code>License-Disclaimer</code> bevat licentie en disclaimer.</li>
+</ul>
+</div>
+<p>De hele map kan worden verplaatst of naar een andere pc gekopieerd. Daar opgeslagen
+snelkeuzewachtwoorden worden bij de eerste start opnieuw gevraagd.</p>
+
+<h2 id="licenties">7-Zip en oscdimg.exe</h2>
+<p><b>7-Zip:</b> SmartPack gebruikt voor inpakken en uitpakken 7-Zip van Igor Pavlov
+(<code>7z.exe</code>, <code>7z.dll</code>). 7-Zip is vrije software onder de GNU LGPL; sommige
+delen vallen onder de BSD-licentie en de unRAR-licentiebeperking. De volledige licentietekst staat
+in het bestand <code>7-Zip-License.txt</code> in de map <code>License-Disclaimer</code>. Programma
+en broncode: <a href="https://www.7-zip.org/">www.7-zip.org</a>.</p>
+<p><b>oscdimg.exe</b> is een programma van Microsoft en wordt niet met SmartPack meegeleverd.
+<a href="S-IT-SmartPack-oscdimg-NL.html">Zo verkrijgt u oscdimg.exe</a>.</p>
+<p class="top"><a href="#">Naar boven</a></p>
+
+</main>
+<footer>
+  © 2026 Sattler IT-Service, Greifenstein &nbsp;•&nbsp; Auteur: Hans Udo Sattler &nbsp;•&nbsp; S-IT-SmartPack v3.0<br>
+  <a href="https://sattlerit.github.io/sit-smartpack/">Projectpagina</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/">Tooloverzicht</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/impressum.html">Colofon</a>
+</footer>
+</body>
+</html>

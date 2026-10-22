@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-IT-SmartPack – Hilfe</title>
+<link rel="icon" type="image/x-icon" href="s-it-icon140.ico">
+<style>
+:root{--primary:#2C3E50;--red:#E74C3C;--logo:#E63946;--blue:#1F5F99;--green:#1E7A46;
+--orange:#A4520C;--bg:#F4F5F7;--card:#FFFFFF;--line:#E5E7EB;--text:#1F2A37;--text2:#4B5563;
+--text3:#6B7280;--tint-g:#EEF6F0;--tint-b:#EEF3FA;--tint-w:#F8F3EA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Segoe UI",system-ui,sans-serif}
+header{background:var(--primary);color:#ECF0F1;padding:18px 16px}
+.wrap{max-width:920px;margin:0 auto}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between}
+.logo{font-size:26px;font-weight:700;letter-spacing:-.3px}
+.logo span{color:var(--logo)}
+.sub{color:#BDC9D4;font-size:14px;margin-top:2px}
+.lang a{color:#ECF0F1;text-decoration:none;margin-left:12px;font-size:14px;opacity:.75}
+.lang a.on{opacity:1;font-weight:600;border-bottom:2px solid var(--logo)}
+.divider{height:3px;background:var(--red)}
+main{padding:24px 16px 8px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:21px;margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--red);
+display:inline-block}
+h3{font-size:16px;margin:18px 0 6px}
+p{margin:8px 0}
+.lead{color:var(--text2);margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+.card.g{background:var(--tint-g);border-color:#D3E6D8}
+.card.b{background:var(--tint-b);border-color:#D8E2EF}
+.card.w{background:var(--tint-w);border-color:#E6DAC4}
+.toc{columns:2;column-gap:28px;margin:0;padding-left:18px}
+.toc li{margin:2px 0}
+.toc a,main a{color:var(--blue)}
+ul,ol{margin:8px 0;padding-left:22px}
+li{margin:4px 0}
+.ui{font-weight:600;white-space:nowrap}
+code,.path{font-family:Consolas,"Cascadia Mono",monospace;font-size:13.5px;background:#EEF0F2;
+padding:1px 5px;border-radius:4px;word-break:break-all}
+.note{border-left:0;color:var(--text2);font-size:14px}
+.plus li{margin:7px 0}
+.plus b{color:var(--primary)}
+.top{font-size:13px;margin-top:4px}
+footer{color:var(--text3);font-size:13px;text-align:center;padding:26px 16px 30px}
+footer a{color:var(--blue);margin:0 6px}
+.path{display:block;margin:4px 0;padding:6px 8px;overflow-wrap:anywhere}
+@media (max-width:640px){.toc{columns:1}.ui{white-space:normal}.brand{display:block}.lang{margin-top:6px}.lang a{margin:0 12px 0 0}}
+@media print{header{background:#fff;color:#000}.lang{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap brand">
+  <div><div class="logo"><span>S-IT</span> SmartPack</div><div class="sub">Ordner packen, entpacken und sicher löschen</div></div>
+  <div class="lang"><a href="S-IT-SmartPack-Hilfe.html" class=on>Deutsch</a> <a href="S-IT-SmartPack-Help.html">English</a> <a href="S-IT-SmartPack-Hulp.html">Nederlands</a></div>
+</div></header>
+<div class="divider"></div>
+<main class="wrap">
+
+<h1>Hilfe zu S-IT-SmartPack</h1>
+<p class="lead">SmartPack fasst Ordner zu einer ISO-Datei oder zu einem 7z- oder ZIP-Archiv
+zusammen, entpackt sie wieder und löscht nicht mehr benötigte Daten unwiederherstellbar.
+Wiederkehrende Aufgaben liegen auf Kurzwahl-Knöpfen und starten mit einem Klick.</p>
+
+<div class="card">
+<ul class="toc">
+<li><a href="#ueberblick">Überblick</a></li>
+<li><a href="#mehr">Was SmartPack über eine 7-Zip-Oberfläche hinaus bietet</a></li>
+<li><a href="#iso">ISO erstellen</a></li>
+<li><a href="#archiv">Archiv erstellen</a></li>
+<li><a href="#kurzwahl">Kurzwahl</a></li>
+<li><a href="#entpacken">Archiv entpacken</a></li>
+<li><a href="#loeschen">Sicher löschen</a></li>
+<li><a href="#pruefen">Ergebnis prüfen und übersprungene Dateien</a></li>
+<li><a href="#einstellungen">Einstellungen</a></li>
+<li><a href="#dateien">Programmordner und Dateien</a></li>
+<li><a href="#lizenzen">7-Zip und oscdimg.exe</a></li>
+</ul>
+</div>
+
+<h2 id="ueberblick">Überblick</h2>
+<p>Das Fenster ist in drei Bereiche geteilt:</p>
+<ul>
+<li><b>Links die Seitenleiste</b> mit den vier Seiten <span class="ui">ISO erstellen</span>,
+<span class="ui">Archiv erstellen</span>, <span class="ui">Archiv entpacken</span> und
+<span class="ui">Sicher löschen</span>. Unten stehen <span class="ui">Einstellungen</span> und
+<span class="ui">Hilfe</span>.</li>
+<li><b>In der Mitte</b> die Kästen der gewählten Seite und darunter die Zeile mit dem
+Startknopf (zum Beispiel <span class="ui">ISO erstellen</span>), <span class="ui">Abbrechen</span>, dem Fortschritt und dem Knopf
+<span class="ui">Log</span>.</li>
+<li><b>Rechts die Kurzwahl</b> mit zehn Knöpfen. Sie erscheint bei
+<span class="ui">ISO erstellen</span> und <span class="ui">Archiv erstellen</span>.</li>
+</ul>
+<p>Über dem Fortschrittsbalken stehen Dateizahl und Größe des laufenden Vorgangs. Die Taste
+<span class="ui">ESC</span> bricht einen laufenden Vorgang ab. Nach jedem Vorgang erscheint ein
+Ergebnisfenster mit dem Knopf <span class="ui">Zielordner öffnen</span>.</p>
+
+<h2 id="mehr">Was SmartPack über eine 7-Zip-Oberfläche hinaus bietet</h2>
+<div class="card w">
+<ul class="plus">
+<li><b>Kurzwahl mit einem Klick:</b> Zehn Knöpfe speichern feste Aufgaben mit Quellordnern,
+Zielordner, Format und auf Wunsch Passwort. Jeder Lauf erhält Datum und Uhrzeit im Dateinamen,
+so entstehen nebeneinander datierte Stände.</li>
+<li><b>ISO-Dateien aus Ordnern:</b> Auch mehrere Ordner von verschiedenen Laufwerken landen in
+einer einzigen ISO-Datei. Ein Doppelklick bindet sie im Explorer als Laufwerk ein, auf jedem
+Windows-PC ohne Zusatzprogramm.</li>
+<li><b>Zurückholen per Kurzwahl:</b> Der neueste Stand wird selbst gefunden, das gespeicherte
+Passwort verwendet und der Inhalt auf Wunsch an den ursprünglichen Ort zurückgeschrieben – für
+Archive und ISO-Dateien.</li>
+<li><b>Gespeicherte Passwörter verschlüsselt:</b> Ein Passwort in der Kurzwahl ist nur für den
+Windows-Benutzer lesbar, der es gespeichert hat, und nur auf diesem PC. Das gilt nur für die
+Kurzwahl: Das Archiv selbst lässt sich mit dem Passwort auf jedem PC entpacken.</li>
+<li><b>Ergebnis prüfen:</b> Auf Wunsch wird jedes Archiv vollständig gelesen und jede Datei
+anhand ihrer Prüfsumme kontrolliert. Bei Archiv und ISO wird zusätzlich geprüft, ob jede Datei
+der Quellordner enthalten ist.</li>
+<li><b>Gesperrte und nicht lesbare Dateien:</b> Sie werden übersprungen, der Vorgang läuft
+weiter. Am Ende stehen sie nach Art getrennt im Ergebnisfenster, bei nicht lesbaren Dateien mit
+einem Hinweis auf S-IT-SSD-Check.</li>
+<li><b>Prüfungen vor dem Start:</b> freier Speicher, die 4-GB-Grenze von FAT32, ein Zielordner
+innerhalb der Quelle und gleichnamige Quellordner werden erkannt, bevor etwas geschrieben wird.</li>
+<li><b>Sicher löschen:</b> Ordner und Dateien, etwa alte ISO-, 7z- und ZIP-Stände, werden
+einmal vollständig überschrieben und gelöscht. Quellordner der Kurzwahl, Windows-, Programm-
+und Benutzerordner sind gesperrt; die Bestätigung erfolgt über eine Zufallszahl.</li>
+</ul>
+</div>
+
+<h2 id="iso">ISO erstellen</h2>
+<p>Eine ISO-Datei ist ein Abbild von Ordnern in einer einzigen Datei. Windows bindet sie per
+Doppelklick als Laufwerk ein; der Inhalt lässt sich dann wie von einer CD oder einem Stick lesen.
+Für diese Seite wird die Microsoft-Datei <code>oscdimg.exe</code> im Programmordner benötigt –
+<a href="S-IT-SmartPack-oscdimg.html">so erhalten Sie oscdimg.exe</a>.</p>
+<div class="card g">
+<h3>Quellen</h3>
+<p>Mit <span class="ui">Hinzufügen</span> kommen Ordner in die Liste, mit
+<span class="ui">Entfernen</span> oder der Taste <span class="ui">Entf</span> werden markierte
+Einträge wieder entfernt. Mehrere Quellordner erscheinen in der ISO-Datei jeweils als eigener
+Ordner. Ein ganzes Laufwerk lässt sich als einzige Quelle wählen.</p>
+</div>
+<div class="card b">
+<h3>Ziel</h3>
+<ul>
+<li><span class="ui">Zielordner</span>: Hier entsteht die ISO-Datei.</li>
+<li><span class="ui">ISO-Name</span>: wird aus dem Ordnernamen mit Datum und Uhrzeit gebildet
+und lässt sich ändern. Bei mehreren Quellordnern lautet er „Sammlung“.</li>
+<li><span class="ui">Laufwerksname</span>: der Name, den der Explorer beim Einbinden zeigt,
+höchstens 32 Zeichen. Umlaute werden dafür umgeschrieben.</li>
+</ul>
+</div>
+<p><b>Mehrere Quellordner:</b> Sie werden zuerst in einen Zwischenordner kopiert, der danach
+wieder gelöscht wird. SmartPack legt ihn bevorzugt auf das schnelle Systemlaufwerk, wenn dort
+genug Platz ist, sonst in den Zielordner. Wo er liegt, steht während des Laufs über dem
+Fortschrittsbalken, zum Beispiel „Zwischenordner auf C:\“.</p>
+<p><b>Vor dem Start geprüft:</b> Ist das Ziellaufwerk mit FAT32 formatiert und die Quelle größer
+als 4 GB, erscheint ein Hinweis – FAT32 erlaubt keine größeren Dateien. Ebenso wird geprüft, ob
+genug Speicher frei ist. Liegt im Zielordner bereits eine Datei gleichen Namens, fragt SmartPack,
+ob sie ersetzt werden soll.</p>
+<p>Unten auf der Seite zeigt eine Zeile, ob <code>oscdimg.exe</code> vorhanden ist. Fehlt die
+Datei, öffnet ein Klick auf diese Zeile die Anleitung zur Beschaffung. Mit
+<span class="ui">Als Kurzwahl speichern</span> rechts daneben wird die Zusammenstellung auf
+einen Kurzwahl-Knopf gelegt.</p>
+
+<h2 id="archiv">Archiv erstellen</h2>
+<p>Ein Archiv fasst Ordner in einer komprimierten Datei zusammen. SmartPack verwendet dafür die
+höchste Kompressionsstufe von 7-Zip.</p>
+<div class="card b">
+<ul>
+<li><span class="ui">Format</span>: 7z oder ZIP. ZIP lässt sich unter Windows ohne Zusatzprogramm
+öffnen; 7z ist kleiner und verschlüsselt mit Passwort auch die Dateinamen.</li>
+<li><span class="ui">Auto-Name</span>: Der Archivname wird aus Ordnername, Datum und Uhrzeit
+gebildet. Ohne Haken lässt er sich über <span class="ui">Speichern unter …</span> frei wählen.</li>
+<li><span class="ui">Passwort</span>: verschlüsselt das Archiv. Das Passwort wird nicht
+gespeichert und ist für das Entpacken erforderlich.</li>
+<li><span class="ui">Quelle nach dem Erstellen des Archivs löschen</span>: Die Quellordner werden
+erst nach erfolgreichem Abschluss gelöscht, nach einer Rückfrage. Fehlen Dateien im Archiv oder
+ist die Prüfung nicht bestanden, bleibt die Quelle unverändert.</li>
+</ul>
+</div>
+<p>Dateien, die gerade von einem anderen Programm geöffnet sind, werden nach Möglichkeit
+mitgenommen.</p>
+
+<h2 id="kurzwahl">Kurzwahl</h2>
+<p>Die Kurzwahl rechts im Fenster speichert bis zu zehn feste Aufgaben – etwa „Verträge [7z]“
+oder „Stick64 [ISO]“.</p>
+<ul>
+<li><b>Linksklick</b> startet die Aufgabe sofort. Die Datei erhält Datum und Uhrzeit im Namen.</li>
+<li><b>Rechtsklick</b> öffnet das Fenster <span class="ui">Kurzwahl belegen</span>.</li>
+<li>Fährt die Maus über einen Knopf, zeigt ein Hinweis Quellen, Ziel, Format und Passwort.</li>
+</ul>
+<div class="card w">
+<h3>Kurzwahl belegen</h3>
+<ul>
+<li><span class="ui">Beschriftung</span>: höchstens 16 Zeichen; das Format wird in eckigen
+Klammern angehängt.</li>
+<li><span class="ui">Format</span>, <span class="ui">Quellordner</span> und
+<span class="ui">Zielordner</span> wie auf den Seiten ISO und Archiv.</li>
+<li><span class="ui">Passwort</span> (nur 7z und ZIP): Bleibt das Feld leer, fragt SmartPack bei
+jedem Start nach dem Passwort. Ein eingetragenes Passwort wird verschlüsselt gespeichert und ist
+nur unter diesem Windows-Benutzer auf diesem PC lesbar. Auf einem anderen PC wird es abgefragt.
+Diese Bindung betrifft nur die in der Kurzwahl gespeicherte Kopie des Passworts: Die Archive
+lassen sich mit dem Passwort auf jedem PC entpacken, mit SmartPack, 7-Zip oder einem anderen
+Packprogramm. Notieren Sie das Passwort deshalb zusätzlich an einem sicheren Ort.</li>
+<li><span class="ui">Belegung entfernen</span> macht den Knopf wieder frei.</li>
+</ul>
+</div>
+<p>Schneller geht es von den Seiten aus: Sind Quellen und Ziel eingetragen, legt
+<span class="ui">Als Kurzwahl speichern</span> sie auf einen Knopf; ein kleines Fenster fragt,
+auf welchen.</p>
+<p>Bei einer Kurzwahl mit einem Quellordner heißt die Datei wie dieser Ordner, bei mehreren
+Quellordnern wie die Beschriftung. Ist ein Laufwerk nicht angeschlossen, meldet SmartPack das
+vor dem Start. Graue Schrift bedeutet: frei, oder eine ISO-Kurzwahl bei abgeschalteter
+ISO-Funktion.</p>
+
+<h2 id="entpacken">Archiv entpacken</h2>
+<p>Diese Seite entpackt 7z-, ZIP- und ISO-Dateien.</p>
+<div class="card g">
+<h3>Aus der Kurzwahl</h3>
+<p>Wird hier eine Kurzwahl gewählt, trägt SmartPack den neuesten Stand dieser Aufgabe ein und
+verwendet ihr gespeichertes Passwort. Ältere Stände lassen sich über
+<span class="ui">Durchsuchen …</span> wählen. Wird eine Datei einer Kurzwahl von Hand gewählt,
+erkennt SmartPack die Kurzwahl selbst.</p>
+</div>
+<div class="card b">
+<h3>Archiv und Ziel</h3>
+<p>Unter <span class="ui">Archiv / ISO</span> steht die Datei, die entpackt wird.</p>
+<ul>
+<li>Ein frei gewählter <span class="ui">Zielordner</span>, zum Beispiel auf einem externen
+Laufwerk.</li>
+<li>Oder <span class="ui">An den ursprünglichen Ort zurück</span>: Der Inhalt wird dorthin
+zurückgeschrieben, wo die Quellordner der Kurzwahl liegen. Vorhandene Dateien mit gleichem
+Namen werden dabei überschrieben; SmartPack fragt vorher nach. Liegen die Quellordner an
+verschiedenen Orten, ist diese Wahl nicht möglich.</li>
+</ul>
+</div>
+<p>Ohne Kurzwahl wird ein Passwort über den Haken <span class="ui">Passwort</span> eingegeben.</p>
+
+<h2 id="loeschen">Sicher löschen</h2>
+<p>Diese Seite löscht Ordner und Dateien so, dass sie sich nicht wiederherstellen lassen – etwa
+alte ISO-, 7z- und ZIP-Stände.</p>
+<div class="card b">
+<ul>
+<li><span class="ui">Ordner …</span> und <span class="ui">Dateien …</span> füllen die Liste
+<span class="ui">Zu löschen</span>; mehrere Dateien lassen sich mit Strg oder Umschalt auf
+einmal wählen.</li>
+<li>Unter der Liste steht, ob alle Einträge gelöscht werden können oder welcher gesperrt ist.</li>
+<li>Nach <span class="ui">Sicher löschen …</span> werden Umfang und Einträge angezeigt. Zur
+Bestätigung wird eine vierstellige Zahl eingetragen, erst dann ist
+<span class="ui">Endgültig löschen</span> möglich.</li>
+</ul>
+</div>
+<p><b>Verfahren:</b> Jede Datei wird einmal vollständig mit Zufallsdaten überschrieben, erhält
+einen zufälligen Namen und wird danach gelöscht. Die Dauer entspricht etwa dem einmaligen
+Kopieren derselben Datenmenge.</p>
+<p><b>Gesperrt</b> sind die Quellordner der Kurzwahl samt der Ordner, die sie enthalten, ganze
+Laufwerke, Windows-, Programm- und Benutzerordner sowie der Programmordner von SmartPack.
+Verknüpfungen werden nur als Verweis entfernt; ihr Ziel bleibt unverändert.</p>
+<p class="note">Technisch bedingt ist es so: SSDs, USB-Sticks und Speicherkarten verteilen
+Schreibvorgänge selbst auf andere Speicherzellen. Das Überschreiben erreicht dort nicht
+garantiert jede alte Kopie. Vollständig geschützt sind Daten, die verschlüsselt gespeichert
+waren. SmartPack zeigt diesen Hinweis an, sobald ein Eintrag auf einem solchen Speicher liegt.</p>
+
+<h2 id="pruefen">Ergebnis prüfen und übersprungene Dateien</h2>
+<div class="card">
+<h3>Ergebnis prüfen</h3>
+<p>Der Haken <span class="ui">Ergebnis nach dem Erstellen prüfen</span> in den Einstellungen
+gilt für ISO, Archiv und Kurzwahl:</p>
+<ul>
+<li>Archive werden vollständig gelesen, jede Datei wird anhand ihrer Prüfsumme kontrolliert.
+Das dauert etwa so lange wie einmal entpacken.</li>
+<li>Bei Archiven und ISO-Dateien wird zusätzlich geprüft, ob jede Datei der Quellordner im
+Ergebnis enthalten ist. Bei ISO-Dateien dauert das nur Sekunden.</li>
+</ul>
+<p>Das Ergebnisfenster zeigt dann zum Beispiel „Prüfung bestanden: 1.234 Dateien, 4,2 GB“.
+Fällt die Prüfung durch, werden die fehlenden Dateien genannt, und eine gewählte
+Quelllöschung unterbleibt.</p>
+</div>
+<div class="card">
+<h3>Gesperrte und nicht lesbare Dateien</h3>
+<p>Kann eine Quelldatei nicht gelesen werden, überspringt SmartPack sie und setzt den Vorgang
+fort. Bleibt ein Lesezugriff 20 Sekunden ohne Fortschritt, gilt die Datei als nicht lesbar.
+Am Ende stehen die übersprungenen Dateien getrennt nach</p>
+<ul>
+<li><b>gesperrt oder ohne Zugriffsrecht</b> – zum Beispiel von einem Programm geöffnet, und</li>
+<li><b>nicht lesbar, möglicherweise defekt</b>.</li>
+</ul>
+<p>Nicht lesbare Dateien können ein Hinweis auf ein nachlassendes Laufwerk sein. Das
+Ergebnisfenster bietet dann den Knopf <span class="ui">S-IT-SSD-Check</span>, der zur
+<a href="https://sattlerit.github.io/sit-ssd-check/">Seite von S-IT-SSD-Check</a> führt.
+Die vollständige Liste steht im Log.</p>
+<p class="note">Beim Erstellen von Archiven liest 7-Zip die Dateien selbst. Hängt dort ein
+Lesezugriff, hilft <span class="ui">Abbrechen</span>; die übersprungenen Dateien werden
+trotzdem ermittelt und gemeldet.</p>
+</div>
+
+<h2 id="einstellungen">Einstellungen</h2>
+<p>Das Fenster öffnet sich über <span class="ui">Einstellungen</span> in der Seitenleiste oder
+mit einem Klick auf die Flagge rechts unten.</p>
+<ul>
+<li><span class="ui">Anzeigegröße</span>: automatisch nach Windows oder fest 90 bis 150 %.</li>
+<li><span class="ui">Sprache</span>: Deutsch, English, Nederlands.</li>
+<li><span class="ui">Farbschema</span>: fünf aufeinander abgestimmte Schemata von hell bis dunkel;
+<span class="ui">Farben zurücksetzen</span> wählt wieder „Gedämpft“.</li>
+<li><span class="ui">Ergebnis prüfen</span>: siehe oben.</li>
+<li><span class="ui">ISO-Funktion</span>: Abgeschaltet werden die Seite
+<span class="ui">ISO erstellen</span> und die Auswahl ISO beim Belegen der Kurzwahl
+ausgeblendet. Belegte ISO-Kurzwahlen bleiben gespeichert. Fehlt <code>oscdimg.exe</code> beim
+ersten Start, bietet SmartPack das Abschalten an.</li>
+</ul>
+<p>Anzeigegröße, Sprache und Farbschema wirken nach einem Neustart des Programms; SmartPack
+bietet ihn direkt an.</p>
+
+<h2 id="dateien">Programmordner und Dateien</h2>
+<div class="card">
+<ul>
+<li><code>S-IT-SP-Start.exe</code> startet das Programm.</li>
+<li><code>S-IT-SmartPack_Prog</code> enthält das Programm, <code>7z.exe</code> und
+<code>7z.dll</code>, die Sprachpakete und diese Hilfe. Hierhin gehört auch
+<code>oscdimg.exe</code>.</li>
+<li><code>S-IT-SmartPack.ini</code> im selben Ordner speichert Einstellungen und Kurzwahl.</li>
+<li><code>S-IT-SmartPack.log</code> hält jeden Vorgang mit Befehl, Dauer und gegebenenfalls
+den übersprungenen Dateien fest; der Knopf <span class="ui">Log</span> öffnet die Datei.</li>
+<li><code>License-Disclaimer</code> enthält Lizenz und Haftungsausschluss.</li>
+</ul>
+</div>
+<p>Der ganze Ordner lässt sich verschieben oder auf einen anderen PC kopieren. Dort gespeicherte
+Kurzwahl-Passwörter werden beim ersten Start erneut abgefragt.</p>
+
+<h2 id="lizenzen">7-Zip und oscdimg.exe</h2>
+<p><b>7-Zip:</b> SmartPack verwendet zum Packen und Entpacken 7-Zip von Igor Pavlov
+(<code>7z.exe</code>, <code>7z.dll</code>). 7-Zip ist freie Software unter der GNU LGPL;
+einzelne Teile stehen unter der BSD-Lizenz und der unRAR-Lizenzeinschränkung. Den vollständigen
+Lizenztext enthält die Datei <code>7-Zip-License.txt</code> im Ordner
+<code>License-Disclaimer</code>. Programm und Quelltext: <a href="https://www.7-zip.org/">www.7-zip.org</a>.</p>
+<p><b>oscdimg.exe</b> ist ein Programm von Microsoft und wird nicht mit SmartPack ausgeliefert.
+<a href="S-IT-SmartPack-oscdimg.html">So erhalten Sie oscdimg.exe</a>.</p>
+<p class="top"><a href="#">Nach oben</a></p>
+
+</main>
+<footer>
+  © 2026 Sattler IT-Service, Greifenstein &nbsp;•&nbsp; Autor: Hans Udo Sattler &nbsp;•&nbsp; S-IT-SmartPack v3.0<br>
+  <a href="https://sattlerit.github.io/sit-smartpack/">Projektseite</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/">Tool-Übersicht</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/impressum.html">Impressum</a>
+</footer>
+</body>
+</html>

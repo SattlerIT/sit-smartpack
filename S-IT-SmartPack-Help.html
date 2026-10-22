@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-IT-SmartPack – Help</title>
+<link rel="icon" type="image/x-icon" href="s-it-icon140.ico">
+<style>
+:root{--primary:#2C3E50;--red:#E74C3C;--logo:#E63946;--blue:#1F5F99;--green:#1E7A46;
+--orange:#A4520C;--bg:#F4F5F7;--card:#FFFFFF;--line:#E5E7EB;--text:#1F2A37;--text2:#4B5563;
+--text3:#6B7280;--tint-g:#EEF6F0;--tint-b:#EEF3FA;--tint-w:#F8F3EA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Segoe UI",system-ui,sans-serif}
+header{background:var(--primary);color:#ECF0F1;padding:18px 16px}
+.wrap{max-width:920px;margin:0 auto}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between}
+.logo{font-size:26px;font-weight:700;letter-spacing:-.3px}
+.logo span{color:var(--logo)}
+.sub{color:#BDC9D4;font-size:14px;margin-top:2px}
+.lang a{color:#ECF0F1;text-decoration:none;margin-left:12px;font-size:14px;opacity:.75}
+.lang a.on{opacity:1;font-weight:600;border-bottom:2px solid var(--logo)}
+.divider{height:3px;background:var(--red)}
+main{padding:24px 16px 8px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:21px;margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--red);
+display:inline-block}
+h3{font-size:16px;margin:18px 0 6px}
+p{margin:8px 0}
+.lead{color:var(--text2);margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+.card.g{background:var(--tint-g);border-color:#D3E6D8}
+.card.b{background:var(--tint-b);border-color:#D8E2EF}
+.card.w{background:var(--tint-w);border-color:#E6DAC4}
+.toc{columns:2;column-gap:28px;margin:0;padding-left:18px}
+.toc li{margin:2px 0}
+.toc a,main a{color:var(--blue)}
+ul,ol{margin:8px 0;padding-left:22px}
+li{margin:4px 0}
+.ui{font-weight:600;white-space:nowrap}
+code,.path{font-family:Consolas,"Cascadia Mono",monospace;font-size:13.5px;background:#EEF0F2;
+padding:1px 5px;border-radius:4px;word-break:break-all}
+.note{border-left:0;color:var(--text2);font-size:14px}
+.plus li{margin:7px 0}
+.plus b{color:var(--primary)}
+.top{font-size:13px;margin-top:4px}
+footer{color:var(--text3);font-size:13px;text-align:center;padding:26px 16px 30px}
+footer a{color:var(--blue);margin:0 6px}
+.path{display:block;margin:4px 0;padding:6px 8px;overflow-wrap:anywhere}
+@media (max-width:640px){.toc{columns:1}.ui{white-space:normal}.brand{display:block}.lang{margin-top:6px}.lang a{margin:0 12px 0 0}}
+@media print{header{background:#fff;color:#000}.lang{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap brand">
+  <div><div class="logo"><span>S-IT</span> SmartPack</div><div class="sub">Pack, extract and securely delete folders</div></div>
+  <div class="lang"><a href="S-IT-SmartPack-Hilfe.html">Deutsch</a> <a href="S-IT-SmartPack-Help.html" class=on>English</a> <a href="S-IT-SmartPack-Hulp.html">Nederlands</a></div>
+</div></header>
+<div class="divider"></div>
+<main class="wrap">
+
+<h1>S-IT-SmartPack Help</h1>
+<p class="lead">SmartPack combines folders into an ISO file or a 7z or ZIP archive, extracts
+them again and deletes data that is no longer needed so that it cannot be recovered.
+Recurring tasks sit on speed dial buttons and start with a single click.</p>
+
+<div class="card">
+<ul class="toc">
+<li><a href="#overview">Overview</a></li>
+<li><a href="#more">What SmartPack offers beyond a 7-Zip front end</a></li>
+<li><a href="#iso">Create ISO</a></li>
+<li><a href="#archive">Create archive</a></li>
+<li><a href="#dial">Speed dial</a></li>
+<li><a href="#extract">Extract archive</a></li>
+<li><a href="#wipe">Secure delete</a></li>
+<li><a href="#verify">Verifying results and skipped files</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#files">Program folder and files</a></li>
+<li><a href="#licences">7-Zip and oscdimg.exe</a></li>
+</ul>
+</div>
+
+<h2 id="overview">Overview</h2>
+<p>The window has three areas:</p>
+<ul>
+<li><b>The sidebar on the left</b> with the four pages <span class="ui">Create ISO</span>,
+<span class="ui">Create archive</span>, <span class="ui">Extract archive</span> and
+<span class="ui">Secure delete</span>. <span class="ui">Settings</span> and
+<span class="ui">Help</span> are at the bottom.</li>
+<li><b>The middle</b> shows the cards of the selected page. Below them is the row with the start
+button (for example <span class="ui">Create ISO</span>), <span class="ui">Cancel</span>, the
+progress and the <span class="ui">Log</span> button.</li>
+<li><b>The speed dial on the right</b> with ten buttons. It appears on
+<span class="ui">Create ISO</span> and <span class="ui">Create archive</span>.</li>
+</ul>
+<p>The number of files and the size of the running operation are shown above the progress bar.
+The <span class="ui">ESC</span> key cancels a running operation. After each operation a result
+window appears with the button <span class="ui">Open destination folder</span>.</p>
+
+<h2 id="more">What SmartPack offers beyond a 7-Zip front end</h2>
+<div class="card w">
+<ul class="plus">
+<li><b>Speed dial with one click:</b> Ten buttons store fixed tasks with source folders,
+destination folder, format and, if you like, a password. Every run puts the date and time into
+the file name, so dated versions build up side by side.</li>
+<li><b>ISO files from folders:</b> Even several folders from different drives end up in a single
+ISO file. A double-click mounts it as a drive in Explorer, on any Windows PC without extra
+software.</li>
+<li><b>Restoring via speed dial:</b> The newest version is found automatically, the stored
+password is used and, if you choose, the content is written back to its original location – for
+archives and ISO files alike.</li>
+<li><b>Stored passwords are encrypted:</b> A password stored in the speed dial can only be read
+by the Windows user who stored it, and only on this PC. This applies to the speed dial only:
+the archive itself can be extracted on any PC with the password.</li>
+<li><b>Verify result:</b> On request every archive is read completely and every file is checked
+against its checksum. For archives and ISO files SmartPack also checks that every file of the
+source folders is included.</li>
+<li><b>Locked and unreadable files:</b> They are skipped and the operation carries on. At the end
+the result window lists them by type, with a pointer to S-IT-SSD-Check for unreadable files.</li>
+<li><b>Checks before starting:</b> free space, the 4 GB limit of FAT32, a destination folder
+inside the source and source folders with the same name are detected before anything is
+written.</li>
+<li><b>Secure delete:</b> Folders and files, such as old ISO, 7z and ZIP versions, are overwritten
+once completely and then deleted. Speed dial source folders, Windows, program and user folders are
+locked; confirmation is by a random number.</li>
+</ul>
+</div>
+
+<h2 id="iso">Create ISO</h2>
+<p>An ISO file is an image of folders in a single file. Windows mounts it as a drive with a
+double-click; its content can then be read as from a CD or a USB stick. This page needs the
+Microsoft file <code>oscdimg.exe</code> in the program folder –
+<a href="S-IT-SmartPack-oscdimg-EN.html">how to get oscdimg.exe</a>.</p>
+<div class="card g">
+<h3>Sources</h3>
+<p><span class="ui">Add</span> puts folders into the list; <span class="ui">Remove</span> or the
+<span class="ui">Del</span> key removes the selected entries. Several source folders each appear
+as a folder of their own in the ISO file. A whole drive can be chosen as the only source.</p>
+</div>
+<div class="card b">
+<h3>Destination</h3>
+<ul>
+<li><span class="ui">Destination folder</span>: the ISO file is created here.</li>
+<li><span class="ui">ISO name</span>: made from the folder name plus date and time; it can be
+changed. With several source folders it is “Collection”.</li>
+<li><span class="ui">Volume label</span>: the name Explorer shows when the file is mounted, at
+most 32 characters. Umlauts are transcribed for it.</li>
+</ul>
+</div>
+<p><b>Several source folders:</b> They are first copied into a staging folder, which is deleted
+afterwards. SmartPack prefers the fast system drive if there is enough space, otherwise the
+destination folder. Its location is shown above the progress bar during the run, for example
+“Staging folder on C:\”.</p>
+<p><b>Checked before starting:</b> If the destination drive is formatted with FAT32 and the source
+is larger than 4 GB, a notice appears – FAT32 does not allow larger files. SmartPack also checks
+for enough free space. If a file with the same name already exists in the destination folder,
+SmartPack asks whether to replace it.</p>
+<p>A line at the bottom of the page shows whether <code>oscdimg.exe</code> is present. If the file
+is missing, clicking this line opens the instructions for getting it.
+<span class="ui">Save as speed dial</span> to the right puts the current selection on a speed
+dial button.</p>
+
+<h2 id="archive">Create archive</h2>
+<p>An archive combines folders in one compressed file. SmartPack uses the highest compression
+level of 7-Zip.</p>
+<div class="card b">
+<ul>
+<li><span class="ui">Format</span>: 7z or ZIP. ZIP opens in Windows without extra software; 7z is
+smaller and, with a password, also encrypts the file names.</li>
+<li><span class="ui">Auto name</span>: the archive name is made from the folder name, date and
+time. Without the tick it can be chosen freely with <span class="ui">Save as …</span>.</li>
+<li><span class="ui">Password</span>: encrypts the archive. The password is not stored and is
+required for extracting.</li>
+<li><span class="ui">Delete the source after the archive has been created</span>: the source
+folders are deleted only after successful completion, following a confirmation. If files are
+missing from the archive or the verification fails, the source stays unchanged.</li>
+</ul>
+</div>
+<p>Files that are currently open in another program are included where possible.</p>
+
+<h2 id="dial">Speed dial</h2>
+<p>The speed dial on the right of the window stores up to ten fixed tasks – such as
+“Contracts [7z]” or “Stick64 [ISO]”.</p>
+<ul>
+<li><b>Left-click</b> starts the task immediately. The file gets the date and time in its name.</li>
+<li><b>Right-click</b> opens the window <span class="ui">Assign speed dial</span>.</li>
+<li>When the mouse rests on a button, a tooltip shows sources, destination, format and
+password.</li>
+</ul>
+<div class="card w">
+<h3>Assign speed dial</h3>
+<ul>
+<li><span class="ui">Label</span>: at most 16 characters; the format is added in square
+brackets.</li>
+<li><span class="ui">Format</span>, <span class="ui">Source folders</span> and
+<span class="ui">Destination folder</span> as on the ISO and archive pages.</li>
+<li><span class="ui">Password</span> (7z and ZIP only): if the field is left empty, SmartPack asks
+for the password at every start. An entered password is stored encrypted and can only be read
+under this Windows user on this PC. On another PC it is asked for.
+This restriction only concerns the copy of the password stored in the speed dial: the archives
+can be extracted with the password on any PC, with SmartPack, 7-Zip or another archiving
+program. Therefore also keep a note of the password in a safe place.</li>
+<li><span class="ui">Remove assignment</span> frees the button again.</li>
+</ul>
+</div>
+<p>It is quicker from the pages: once sources and destination are filled in,
+<span class="ui">Save as speed dial</span> puts them on a button; a small window asks which
+one.</p>
+<p>With one source folder the file is named after that folder, with several source folders after
+the label. If a drive is not connected, SmartPack reports this before starting. Grey text means:
+free, or an ISO speed dial while the ISO function is switched off.</p>
+
+<h2 id="extract">Extract archive</h2>
+<p>This page extracts 7z, ZIP and ISO files.</p>
+<div class="card g">
+<h3>From speed dial</h3>
+<p>If you choose a speed dial here, SmartPack fills in the newest version of that task and uses
+its stored password. Older versions can be chosen with <span class="ui">Browse …</span>. If a
+file of a speed dial is chosen by hand, SmartPack recognises the speed dial by itself.</p>
+</div>
+<div class="card b">
+<h3>Archive and destination</h3>
+<p><span class="ui">Archive / ISO</span> shows the file that will be extracted.</p>
+<ul>
+<li>A freely chosen <span class="ui">Destination folder</span>, for example on an external
+drive.</li>
+<li>Or <span class="ui">Back to the original location</span>: the content is written back to
+where the source folders of the speed dial are. Existing files with the same name are
+overwritten; SmartPack asks first. If the source folders are in different places, this option
+is not available.</li>
+</ul>
+</div>
+<p>Without a speed dial, a password is entered via the <span class="ui">Password</span> tick.</p>
+
+<h2 id="wipe">Secure delete</h2>
+<p>This page deletes folders and files so that they cannot be recovered – such as old ISO, 7z
+and ZIP versions.</p>
+<div class="card b">
+<ul>
+<li><span class="ui">Folder …</span> and <span class="ui">Files …</span> fill the list
+<span class="ui">To delete</span>; several files can be selected at once with Ctrl or Shift.</li>
+<li>Below the list it says whether all entries can be deleted or which one is locked.</li>
+<li>After <span class="ui">Secure delete …</span> the extent and the entries are shown. To
+confirm, a four-digit number is entered; only then is <span class="ui">Delete permanently</span>
+possible.</li>
+</ul>
+</div>
+<p><b>Method:</b> Every file is overwritten once completely with random data, given a random name
+and then deleted. It takes about as long as copying the same amount of data once.</p>
+<p><b>Locked</b> are the speed dial source folders and the folders containing them, whole drives,
+Windows, program and user folders and the program folder of SmartPack. Shortcuts and links are
+removed only as a reference; their target stays unchanged.</p>
+<p class="note">For technical reasons: SSDs, USB sticks and memory cards distribute writes to other
+memory cells on their own. Overwriting there is not guaranteed to reach every old copy. Data
+that was stored encrypted is fully protected. SmartPack shows this notice as soon as an entry is
+on such storage.</p>
+
+<h2 id="verify">Verifying results and skipped files</h2>
+<div class="card">
+<h3>Verify result</h3>
+<p>The tick <span class="ui">Verify the result after creating it</span> in the settings applies
+to ISO, archive and speed dial:</p>
+<ul>
+<li>Archives are read completely; every file is checked against its checksum. This takes about
+as long as extracting once.</li>
+<li>For archives and ISO files SmartPack also checks that every file of the source folders is
+included in the result. For ISO files this takes only seconds.</li>
+</ul>
+<p>The result window then shows, for example, “Verification passed: 1,234 files, 4.2 GB”. If the
+verification fails, the missing files are listed and a selected deletion of the source does not
+take place.</p>
+</div>
+<div class="card">
+<h3>Locked and unreadable files</h3>
+<p>If a source file cannot be read, SmartPack skips it and continues. If a read makes no progress
+for 20 seconds, the file counts as unreadable. At the end the skipped files are listed
+separately as</p>
+<ul>
+<li><b>locked or no access permission</b> – for example opened by a program, and</li>
+<li><b>not readable, possibly defective</b>.</li>
+</ul>
+<p>Unreadable files can indicate a failing drive. The result window then offers the button
+<span class="ui">S-IT-SSD-Check</span>, which leads to the
+<a href="https://sattlerit.github.io/sit-ssd-check/">S-IT-SSD-Check page</a>. The complete list is
+in the log.</p>
+<p class="note">When creating archives, 7-Zip reads the files itself. If a read hangs there,
+<span class="ui">Cancel</span> helps; the skipped files are still determined and reported.</p>
+</div>
+
+<h2 id="settings">Settings</h2>
+<p>The window opens via <span class="ui">Settings</span> in the sidebar or by clicking the flag at
+the bottom right.</p>
+<ul>
+<li><span class="ui">Display size</span>: automatic according to Windows or fixed from 90 to
+150 %.</li>
+<li><span class="ui">Language</span>: Deutsch, English, Nederlands.</li>
+<li><span class="ui">Colour scheme</span>: five matched schemes from light to dark;
+<span class="ui">Reset colours</span> selects “Muted” again.</li>
+<li><span class="ui">Verify result</span>: see above.</li>
+<li><span class="ui">ISO function</span>: when switched off, the page
+<span class="ui">Create ISO</span> and the ISO choice when assigning a speed dial are hidden.
+Assigned ISO speed dials remain stored. If <code>oscdimg.exe</code> is missing at the first
+start, SmartPack offers to switch the function off.</li>
+</ul>
+<p>Display size, language and colour scheme take effect after a program restart; SmartPack
+offers it right away.</p>
+
+<h2 id="files">Program folder and files</h2>
+<div class="card">
+<ul>
+<li><code>S-IT-SP-Start.exe</code> starts the program.</li>
+<li><code>S-IT-SmartPack_Prog</code> contains the program, <code>7z.exe</code> and
+<code>7z.dll</code>, the language packs and this help. <code>oscdimg.exe</code> also belongs
+here.</li>
+<li><code>S-IT-SmartPack.ini</code> in the same folder stores settings and speed dial.</li>
+<li><code>S-IT-SmartPack.log</code> records every operation with command, duration and, where
+applicable, the skipped files; the <span class="ui">Log</span> button opens it.</li>
+<li><code>License-Disclaimer</code> contains the licence and disclaimer.</li>
+</ul>
+</div>
+<p>The whole folder can be moved or copied to another PC. Speed dial passwords stored there are
+asked for again at the first start.</p>
+
+<h2 id="licences">7-Zip and oscdimg.exe</h2>
+<p><b>7-Zip:</b> SmartPack uses 7-Zip by Igor Pavlov (<code>7z.exe</code>, <code>7z.dll</code>)
+for packing and extracting. 7-Zip is free software under the GNU LGPL; some parts are under the
+BSD licence and the unRAR licence restriction. The complete licence text is in the file
+<code>7-Zip-License.txt</code> in the <code>License-Disclaimer</code> folder. Program and source
+code: <a href="https://www.7-zip.org/">www.7-zip.org</a>.</p>
+<p><b>oscdimg.exe</b> is a Microsoft program and is not supplied with SmartPack.
+<a href="S-IT-SmartPack-oscdimg-EN.html">How to get oscdimg.exe</a>.</p>
+<p class="top"><a href="#">Back to top</a></p>
+
+</main>
+<footer>
+  © 2026 Sattler IT-Service, Greifenstein &nbsp;•&nbsp; Author: Hans Udo Sattler &nbsp;•&nbsp; S-IT-SmartPack v3.0<br>
+  <a href="https://sattlerit.github.io/sit-smartpack/">Project page</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/">Tool overview</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/impressum.html">Imprint</a>
+</footer>
+</body>
+</html>

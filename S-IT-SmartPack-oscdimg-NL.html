@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-IT-SmartPack – oscdimg.exe verkrijgen</title>
+<link rel="icon" type="image/x-icon" href="s-it-icon140.ico">
+<style>
+:root{--primary:#2C3E50;--red:#E74C3C;--logo:#E63946;--blue:#1F5F99;--green:#1E7A46;
+--orange:#A4520C;--bg:#F4F5F7;--card:#FFFFFF;--line:#E5E7EB;--text:#1F2A37;--text2:#4B5563;
+--text3:#6B7280;--tint-g:#EEF6F0;--tint-b:#EEF3FA;--tint-w:#F8F3EA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Segoe UI",system-ui,sans-serif}
+header{background:var(--primary);color:#ECF0F1;padding:18px 16px}
+.wrap{max-width:920px;margin:0 auto}
+.brand{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between}
+.logo{font-size:26px;font-weight:700;letter-spacing:-.3px}
+.logo span{color:var(--logo)}
+.sub{color:#BDC9D4;font-size:14px;margin-top:2px}
+.lang a{color:#ECF0F1;text-decoration:none;margin-left:12px;font-size:14px;opacity:.75}
+.lang a.on{opacity:1;font-weight:600;border-bottom:2px solid var(--logo)}
+.divider{height:3px;background:var(--red)}
+main{padding:24px 16px 8px}
+h1{font-size:26px;margin:0 0 6px}
+h2{font-size:21px;margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--red);
+display:inline-block}
+h3{font-size:16px;margin:18px 0 6px}
+p{margin:8px 0}
+.lead{color:var(--text2);margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+.card.g{background:var(--tint-g);border-color:#D3E6D8}
+.card.b{background:var(--tint-b);border-color:#D8E2EF}
+.card.w{background:var(--tint-w);border-color:#E6DAC4}
+.toc{columns:2;column-gap:28px;margin:0;padding-left:18px}
+.toc li{margin:2px 0}
+.toc a,main a{color:var(--blue)}
+ul,ol{margin:8px 0;padding-left:22px}
+li{margin:4px 0}
+.ui{font-weight:600;white-space:nowrap}
+code,.path{font-family:Consolas,"Cascadia Mono",monospace;font-size:13.5px;background:#EEF0F2;
+padding:1px 5px;border-radius:4px;word-break:break-all}
+.note{border-left:0;color:var(--text2);font-size:14px}
+.plus li{margin:7px 0}
+.plus b{color:var(--primary)}
+.top{font-size:13px;margin-top:4px}
+footer{color:var(--text3);font-size:13px;text-align:center;padding:26px 16px 30px}
+footer a{color:var(--blue);margin:0 6px}
+.path{display:block;margin:4px 0;padding:6px 8px;overflow-wrap:anywhere}
+@media (max-width:640px){.toc{columns:1}.ui{white-space:normal}.brand{display:block}.lang{margin-top:6px}.lang a{margin:0 12px 0 0}}
+@media print{header{background:#fff;color:#000}.lang{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="wrap brand">
+  <div><div class="logo"><span>S-IT</span> SmartPack</div><div class="sub">Mappen inpakken, uitpakken en veilig verwijderen</div></div>
+  <div class="lang"><a href="S-IT-SmartPack-oscdimg.html">Deutsch</a> <a href="S-IT-SmartPack-oscdimg-EN.html">English</a> <a href="S-IT-SmartPack-oscdimg-NL.html" class=on>Nederlands</a></div>
+</div></header>
+<div class="divider"></div>
+<main class="wrap">
+
+<h1>oscdimg.exe verkrijgen</h1>
+<p class="lead">Voor de pagina <span class="ui">ISO maken</span> heeft SmartPack het
+Microsoft-bestand <code>oscdimg.exe</code> nodig. Het hoort bij de gratis „Windows Assessment and
+Deployment Kit” (Windows ADK) en wordt niet met SmartPack meegeleverd. Voor het gebruik gelden de
+licentievoorwaarden van Microsoft.</p>
+
+<h2>Is het bestand er al?</h2>
+<p>Sommige programma's, bijvoorbeeld voor back-ups of systeemkopieën, brengen
+<code>oscdimg.exe</code> al mee. Zoek in Verkenner naar <code>oscdimg.exe</code> op station C:
+om te zien of het op de pc staat. Staat het er met Microsoft als uitgever (rechtsklik ›
+Eigenschappen › Details), dan volstaat een kopie in de programmamap van SmartPack – zie stap 4
+hieronder.</p>
+
+<h2>Officiële weg: Windows ADK</h2>
+<div class="card b">
+<ol>
+<li>Open de Microsoft-pagina <a href="https://learn.microsoft.com/nl-nl/windows-hardware/get-started/adk-install">De Windows ADK downloaden en installeren</a>
+en download daar <b>Windows ADK</b>. De Windows PE-invoegtoepassing is niet nodig.</li>
+<li>Start de setup. Vink bij de keuze van de onderdelen alleen <b>Deployment Tools</b>
+(implementatiehulpprogramma's) aan; alle andere vinkjes kunnen weg.</li>
+<li>Na de installatie staat het bestand hier:<br>
+<span class="path">C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg\oscdimg.exe</span></li>
+<li>Kopieer <code>oscdimg.exe</code> naar de map <code>S-IT-SmartPack_Prog</code> – waar ook
+<code>S-IT-SmartPack.exe</code> en <code>7z.exe</code> staan.</li>
+<li>Start SmartPack opnieuw.</li>
+</ol>
+</div>
+<p><b>Zo ziet u dat het gelukt is:</b> Onderaan de pagina <span class="ui">ISO maken</span> staat
+in groen „oscdimg.exe is aanwezig in de programmamap.” Is de ISO-functie in de instellingen
+uitgeschakeld, zet daar dan het vinkje <span class="ui">ISO-functie gebruiken</span> weer aan.</p>
+<p class="note">De ADK kan na het kopiëren weer worden verwijderd; SmartPack heeft alleen dit ene
+bestand nodig.</p>
+<p class="top"><a href="S-IT-SmartPack-Hulp.html">Terug naar de help</a></p>
+
+</main>
+<footer>
+  © 2026 Sattler IT-Service, Greifenstein &nbsp;•&nbsp; Auteur: Hans Udo Sattler &nbsp;•&nbsp; S-IT-SmartPack v3.0<br>
+  <a href="https://sattlerit.github.io/sit-smartpack/">Projectpagina</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/">Tooloverzicht</a>
+  <a href="https://sattlerit.github.io/sattlerit-tools/impressum.html">Colofon</a>
+</footer>
+</body>
+</html>
