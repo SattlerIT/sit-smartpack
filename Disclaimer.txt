@@ -1,0 +1,228 @@
+============================================================
+ S-IT-SmartPack – Lizenz und Haftungsausschluss
+ License and Disclaimer · Licentie en disclaimer
+ © 2026 Sattler IT-Service, Greifenstein · Hans Udo Sattler
+============================================================
+
+ 1  Deutsch
+ 2  English
+ 3  Nederlands
+
+
+============================================================
+ 1  DEUTSCH
+============================================================
+
+LIZENZ
+------
+Freeware – kostenlose Nutzung und Weitergabe erlaubt.
+Kommerzielle Weiterverwendung oder Modifikation ohne
+Genehmigung nicht gestattet.
+
+HAFTUNGSAUSSCHLUSS
+------------------
+Alle Angaben ohne Gewähr. Irrtümer vorbehalten.
+
+S-IT-SmartPack ist ein kostenloses Werkzeug, das Ordner zu
+ISO-Dateien oder 7z- und ZIP-Archiven zusammenfasst, diese
+wieder entpackt und Ordner und Dateien unwiederherstellbar
+löscht. Das Tool arbeitet nach bestem Wissen zuverlässig, eine
+fehlerfreie Funktion auf jedem System und in jeder
+Konstellation kann jedoch nicht zugesichert werden.
+
+1. Keine Zusicherung der Vollständigkeit
+   Gesperrte oder nicht lesbare Dateien werden übersprungen
+   und im Anschluss gemeldet. Ein erstelltes Archiv oder eine
+   ISO-Datei ist daher keine Zusicherung dafür, dass alle
+   Dateien der Quellordner enthalten sind. Beachten Sie die
+   Meldungen im Ergebnisfenster und im Log; die Option
+   „Ergebnis prüfen“ in den Einstellungen kontrolliert das
+   Ergebnis zusätzlich.
+
+2. Löschen und Überschreiben sind endgültig
+   „Quelle nach dem Erstellen des Archivs löschen“ und
+   „Sicher löschen“ entfernen Daten ohne Umweg über den
+   Papierkorb; „Sicher löschen“ überschreibt sie zuvor.
+   Beim Entpacken an den ursprünglichen Ort werden vorhandene
+   Dateien mit gleichem Namen überschrieben. Prüfen Sie Auswahl
+   und Zielordner vor dem Ausführen.
+
+3. Passwörter
+   Ein Archiv mit Passwort lässt sich ohne dieses Passwort
+   nicht entpacken. Ein vergessenes Passwort kann weder vom
+   Tool noch vom Autor wiederhergestellt werden. Notieren Sie
+   Passwörter an einem sicheren Ort.
+
+4. Nutzung auf eigene Verantwortung
+   Die Verwendung des Tools, insbesondere das Löschen von
+   Quellordnern und das sichere Löschen, erfolgt auf eigene
+   Verantwortung.
+
+5. Haftungsausschluss
+   Eine Haftung für Schäden, Datenverluste oder Vermögens-
+   schäden, die aus der Nutzung des Tools oder seiner
+   Ergebnisse entstehen, ist – soweit gesetzlich zulässig –
+   ausgeschlossen.
+
+6. Programme anderer Hersteller
+   Zum Packen und Entpacken verwendet das Tool 7-Zip von Igor
+   Pavlov (7z.exe, 7z.dll), freie Software unter der GNU LGPL
+   mit Teilen unter der BSD-Lizenz und der unRAR-Lizenz-
+   einschränkung. Der vollständige Lizenztext steht in der
+   Datei 7-Zip-License.txt in diesem Ordner; Programm und
+   Quelltext: https://www.7-zip.org/
+   oscdimg.exe ist ein Programm von Microsoft. Es wird nicht
+   mitgeliefert; für seine Nutzung gelten die Lizenz-
+   bedingungen von Microsoft.
+
+7. Sicherungen bleiben unerlässlich
+   Bewahren Sie wichtige Archive zusätzlich auf einem anderen
+   Laufwerk auf. Ein Archiv auf demselben Laufwerk wie die
+   Quelle schützt nicht vor dem Ausfall dieses Laufwerks.
+
+
+============================================================
+ 2  ENGLISH
+============================================================
+
+LICENSE
+-------
+Freeware – free use and redistribution permitted.
+Commercial reuse or modification without permission is not
+allowed.
+
+DISCLAIMER
+----------
+All information is provided without guarantee. Errors excepted.
+
+S-IT-SmartPack is a free tool that combines folders into ISO
+files or 7z and ZIP archives, extracts them again and deletes
+folders and files so that they cannot be recovered. The tool
+works reliably to the best of our knowledge; however,
+error-free operation on every system and in every
+configuration cannot be guaranteed.
+
+1. No assurance of completeness
+   Locked or unreadable files are skipped and reported
+   afterwards. A created archive or ISO file is therefore no
+   assurance that all files of the source folders are
+   included. Pay attention to the messages in the result
+   window and in the log; the option "Verify result" in the
+   settings additionally checks the result.
+
+2. Deleting and overwriting are final
+   "Delete the source after the archive has been created" and
+   "Secure delete" remove data without going through the
+   Recycle Bin; "Secure delete" overwrites it first. When
+   extracting to the original location, existing files with
+   the same name are overwritten. Check the selection and the
+   destination folder before executing.
+
+3. Passwords
+   An archive with a password cannot be extracted without
+   that password. A forgotten password cannot be recovered,
+   neither by the tool nor by the author. Keep a note of
+   passwords in a safe place.
+
+4. Use at your own risk
+   Using the tool, in particular deleting source folders and
+   secure deletion, is at your own risk.
+
+5. Limitation of liability
+   Liability for damage, data loss or financial loss arising
+   from the use of the tool or its results is excluded to the
+   extent permitted by law.
+
+6. Third-party programs
+   For packing and extracting, the tool uses 7-Zip by Igor
+   Pavlov (7z.exe, 7z.dll), free software under the GNU LGPL
+   with parts under the BSD license and the unRAR license
+   restriction. The complete license text is in the file
+   7-Zip-License.txt in this folder; program and source code:
+   https://www.7-zip.org/
+   oscdimg.exe is a Microsoft program. It is not supplied;
+   Microsoft's license terms apply to its use.
+
+7. Backups remain essential
+   Keep important archives on another drive as well. An
+   archive on the same drive as the source does not protect
+   against the failure of that drive.
+
+
+============================================================
+ 3  NEDERLANDS
+============================================================
+
+LICENTIE
+--------
+Freeware – gratis gebruik en verspreiding toegestaan.
+Commercieel hergebruik of wijziging zonder toestemming is
+niet toegestaan.
+
+DISCLAIMER
+----------
+Alle informatie zonder garantie. Vergissingen voorbehouden.
+
+S-IT-SmartPack is een gratis hulpmiddel dat mappen samenvoegt
+tot ISO-bestanden of 7z- en ZIP-archieven, deze weer uitpakt
+en mappen en bestanden zo verwijdert dat ze niet te herstellen
+zijn. Het hulpmiddel werkt naar beste weten betrouwbaar; een
+foutloze werking op elk systeem en in elke configuratie kan
+echter niet worden gegarandeerd.
+
+1. Geen garantie op volledigheid
+   Vergrendelde of onleesbare bestanden worden overgeslagen en
+   achteraf gemeld. Een gemaakt archief of ISO-bestand is
+   daarom geen garantie dat alle bestanden van de bronmappen
+   erin staan. Let op de meldingen in het resultaatvenster en
+   in het log; de optie „Resultaat controleren” in de
+   instellingen controleert het resultaat bovendien.
+
+2. Verwijderen en overschrijven zijn definitief
+   „Bron verwijderen nadat het archief is gemaakt” en „Veilig
+   verwijderen” verwijderen gegevens zonder omweg via de
+   Prullenbak; „Veilig verwijderen” overschrijft ze eerst.
+   Bij uitpakken naar de oorspronkelijke locatie worden
+   bestaande bestanden met dezelfde naam overschreven.
+   Controleer selectie en doelmap voordat u de bewerking
+   uitvoert.
+
+3. Wachtwoorden
+   Een archief met wachtwoord kan zonder dat wachtwoord niet
+   worden uitgepakt. Een vergeten wachtwoord kan noch door het
+   hulpmiddel noch door de auteur worden hersteld. Noteer
+   wachtwoorden op een veilige plek.
+
+4. Gebruik op eigen verantwoordelijkheid
+   Het gebruik van het hulpmiddel, in het bijzonder het
+   verwijderen van bronmappen en het veilig verwijderen,
+   gebeurt op eigen verantwoordelijkheid.
+
+5. Uitsluiting van aansprakelijkheid
+   Aansprakelijkheid voor schade, gegevensverlies of
+   financiële schade die voortvloeit uit het gebruik van het
+   hulpmiddel of de resultaten ervan is uitgesloten, voor
+   zover wettelijk toegestaan.
+
+6. Programma's van derden
+   Voor inpakken en uitpakken gebruikt het hulpmiddel 7-Zip
+   van Igor Pavlov (7z.exe, 7z.dll), vrije software onder de
+   GNU LGPL met delen onder de BSD-licentie en de unRAR-
+   licentiebeperking. De volledige licentietekst staat in het
+   bestand 7-Zip-License.txt in deze map; programma en
+   broncode: https://www.7-zip.org/
+   oscdimg.exe is een programma van Microsoft. Het wordt niet
+   meegeleverd; voor het gebruik gelden de licentie-
+   voorwaarden van Microsoft.
+
+7. Back-ups blijven onmisbaar
+   Bewaar belangrijke archieven ook op een ander station. Een
+   archief op hetzelfde station als de bron beschermt niet
+   tegen het uitvallen van dat station.
+
+------------------------------------------------------------
+Kontakt / Contact:
+  tool-entwicklung@sattler-it.de
+Projektseite / Project page / Projectpagina:
+  https://sattlerit.github.io/sit-smartpack/
+------------------------------------------------------------
