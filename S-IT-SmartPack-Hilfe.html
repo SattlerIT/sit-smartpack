@@ -113,8 +113,8 @@ Archive und ISO-Dateien.</li>
 Windows-Benutzer lesbar, der es gespeichert hat, und nur auf diesem PC. Das gilt nur für die
 Kurzwahl: Das Archiv selbst lässt sich mit dem Passwort auf jedem PC entpacken.</li>
 <li><b>Ergebnis prüfen:</b> Auf Wunsch wird jedes Archiv vollständig gelesen und jede Datei
-anhand ihrer Prüfsumme kontrolliert. Bei Archiv und ISO wird zusätzlich geprüft, ob jede Datei
-der Quellordner enthalten ist.</li>
+anhand ihrer Prüfsumme kontrolliert; zusätzlich wird geprüft, ob jede Datei der Quellordner
+enthalten ist. Bei ISO-Dateien vergleicht SmartPack die Zahl der gelesenen Dateien.</li>
 <li><b>Gesperrte und nicht lesbare Dateien:</b> Sie werden übersprungen, der Vorgang läuft
 weiter. Am Ende stehen sie nach Art getrennt im Ergebnisfenster, bei nicht lesbaren Dateien mit
 einem Hinweis auf S-IT-SSD-Check.</li>
@@ -150,8 +150,14 @@ höchstens 32 Zeichen. Umlaute werden dafür umgeschrieben.</li>
 </div>
 <p><b>Mehrere Quellordner:</b> Sie werden zuerst in einen Zwischenordner kopiert, der danach
 wieder gelöscht wird. SmartPack legt ihn bevorzugt auf das schnelle Systemlaufwerk, wenn dort
-genug Platz ist, sonst in den Zielordner. Wo er liegt, steht während des Laufs über dem
-Fortschrittsbalken, zum Beispiel „Zwischenordner auf C:\“.</p>
+genug Platz ist, sonst auf das Ziellaufwerk – jeweils direkt auf die oberste Ebene mit kurzem
+Namen, zum Beispiel <code>C:\_SP12345</code>. So werden die Pfade darin nicht länger als am
+Original. Wo er liegt, steht während des Laufs über dem Fortschrittsbalken, zum Beispiel
+„Zwischenordner auf C:\“.</p>
+<p class="note">Technisch bedingt ist es so: Windows erlaubt für einen Pfad höchstens 259 Zeichen.
+Würde ein Pfad im Zwischenordner länger, meldet SmartPack das vor dem Kopieren und nennt die
+betroffene Datei. Ein einzelner Quellordner kommt ohne Zwischenordner aus; 7z- und ZIP-Archive
+ebenfalls.</p>
 <p><b>Vor dem Start geprüft:</b> Ist das Ziellaufwerk mit FAT32 formatiert und die Quelle größer
 als 4 GB, erscheint ein Hinweis – FAT32 erlaubt keine größeren Dateien. Ebenso wird geprüft, ob
 genug Speicher frei ist. Liegt im Zielordner bereits eine Datei gleichen Namens, fragt SmartPack,
@@ -234,6 +240,10 @@ verschiedenen Orten, ist diese Wahl nicht möglich.</li>
 </ul>
 </div>
 <p>Ohne Kurzwahl wird ein Passwort über den Haken <span class="ui">Passwort</span> eingegeben.</p>
+<p class="note">Technisch bedingt ist es so: Bei sehr großen ISO-Dateien kann 7-Zip den Inhalt
+mitunter nicht lesen. SmartPack meldet das dann, statt unvollständig zu entpacken. Ein
+Doppelklick auf die ISO-Datei im Explorer bindet sie als Laufwerk ein; von dort lassen sich die
+Dateien kopieren.</p>
 
 <h2 id="loeschen">Sicher löschen</h2>
 <p>Diese Seite löscht Ordner und Dateien so, dass sie sich nicht wiederherstellen lassen – etwa
@@ -264,16 +274,18 @@ waren. SmartPack zeigt diesen Hinweis an, sobald ein Eintrag auf einem solchen S
 <div class="card">
 <h3>Ergebnis prüfen</h3>
 <p>Der Haken <span class="ui">Ergebnis nach dem Erstellen prüfen</span> in den Einstellungen
-gilt für ISO, Archiv und Kurzwahl:</p>
+gilt für 7z- und ZIP-Archive, auch bei der Kurzwahl:</p>
 <ul>
 <li>Archive werden vollständig gelesen, jede Datei wird anhand ihrer Prüfsumme kontrolliert.
 Das dauert etwa so lange wie einmal entpacken.</li>
-<li>Bei Archiven und ISO-Dateien wird zusätzlich geprüft, ob jede Datei der Quellordner im
-Ergebnis enthalten ist. Bei ISO-Dateien dauert das nur Sekunden.</li>
+<li>Zusätzlich wird geprüft, ob jede Datei der Quellordner im Archiv enthalten ist.</li>
 </ul>
 <p>Das Ergebnisfenster zeigt dann zum Beispiel „Prüfung bestanden: 1.234 Dateien, 4,2 GB“.
 Fällt die Prüfung durch, werden die fehlenden Dateien genannt, und eine gewählte
 Quelllöschung unterbleibt.</p>
+<p>Bei ISO-Dateien zählt die Abschlussmeldung von <code>oscdimg.exe</code>. SmartPack trägt sie
+ins Log ein, zusammen mit der Zahl der Dateien, die oscdimg.exe gelesen hat. Hat oscdimg.exe
+weniger Dateien gelesen, als SmartPack gezählt hat, weist das Ergebnisfenster darauf hin.</p>
 </div>
 <div class="card">
 <h3>Gesperrte und nicht lesbare Dateien</h3>

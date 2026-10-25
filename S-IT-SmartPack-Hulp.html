@@ -113,8 +113,8 @@ voor archieven en ISO-bestanden.</li>
 voor de Windows-gebruiker die het heeft opgeslagen, en alleen op deze pc. Dat geldt alleen voor
 de snelkeuze: het archief zelf is met het wachtwoord op elke pc uit te pakken.</li>
 <li><b>Resultaat controleren:</b> Desgewenst wordt elk archief volledig gelezen en elk bestand aan
-de hand van zijn controlesom gecontroleerd. Bij archief en ISO wordt bovendien gecontroleerd of
-elk bestand van de bronmappen aanwezig is.</li>
+de hand van zijn controlesom gecontroleerd; bovendien wordt gecontroleerd of elk bestand van de
+bronmappen aanwezig is. Bij ISO-bestanden vergelijkt SmartPack het aantal gelezen bestanden.</li>
 <li><b>Vergrendelde en onleesbare bestanden:</b> Ze worden overgeslagen, de bewerking gaat door.
 Aan het eind staan ze naar soort gescheiden in het resultaatvenster, bij onleesbare bestanden
 met een verwijzing naar S-IT-SSD-Check.</li>
@@ -150,8 +150,13 @@ worden gewijzigd. Bij meerdere bronmappen luidt hij „Verzameling”.</li>
 </div>
 <p><b>Meerdere bronmappen:</b> Ze worden eerst naar een tussenmap gekopieerd, die daarna weer
 wordt verwijderd. SmartPack zet die bij voorkeur op het snelle systeemstation als daar genoeg
-ruimte is, anders in de doelmap. Waar hij staat, ziet u tijdens de run boven de voortgangsbalk,
-bijvoorbeeld „Tussenmap op C:\”.</p>
+ruimte is, anders op het doelstation – telkens direct op het hoogste niveau met een korte naam,
+bijvoorbeeld <code>C:\_SP12345</code>. Zo worden de paden daarin niet langer dan bij het
+origineel. Waar hij staat, ziet u tijdens de run boven de voortgangsbalk, bijvoorbeeld
+„Tussenmap op C:\”.</p>
+<p class="note">Technisch is het zo: Windows staat voor een pad maximaal 259 tekens toe. Zou een
+pad in de tussenmap langer worden, dan meldt SmartPack dat vóór het kopiëren en noemt het
+betreffende bestand. Eén bronmap heeft geen tussenmap nodig; 7z- en ZIP-archieven ook niet.</p>
 <p><b>Vóór de start gecontroleerd:</b> Is het doelstation met FAT32 geformatteerd en de bron
 groter dan 4 GB, dan verschijnt een melding – FAT32 staat geen grotere bestanden toe. Ook wordt
 gecontroleerd of er genoeg ruimte vrij is. Staat er in de doelmap al een bestand met dezelfde
@@ -233,6 +238,10 @@ verschillende plaatsen, dan is deze keuze niet mogelijk.</li>
 </div>
 <p>Zonder snelkeuze voert u een wachtwoord in via het vinkje
 <span class="ui">Wachtwoord</span>.</p>
+<p class="note">Technisch is het zo: bij zeer grote ISO-bestanden kan 7-Zip de inhoud soms niet
+lezen. SmartPack meldt dat dan, in plaats van onvolledig uit te pakken. Een dubbelklik op het
+ISO-bestand in Verkenner koppelt het als station; van daaruit kunnen de bestanden worden
+gekopieerd.</p>
 
 <h2 id="verwijderen">Veilig verwijderen</h2>
 <p>Deze pagina verwijdert mappen en bestanden zo, dat ze niet te herstellen zijn – bijvoorbeeld
@@ -263,16 +272,18 @@ zodra een item op zo'n opslag staat.</p>
 <div class="card">
 <h3>Resultaat controleren</h3>
 <p>Het vinkje <span class="ui">Resultaat na het maken controleren</span> in de instellingen geldt
-voor ISO, archief en snelkeuze:</p>
+voor 7z- en ZIP-archieven, ook bij de snelkeuze:</p>
 <ul>
 <li>Archieven worden volledig gelezen; elk bestand wordt aan de hand van zijn controlesom
 gecontroleerd. Dat duurt ongeveer even lang als één keer uitpakken.</li>
-<li>Bij archieven en ISO-bestanden wordt bovendien gecontroleerd of elk bestand van de bronmappen
-in het resultaat staat. Bij ISO-bestanden duurt dat maar enkele seconden.</li>
+<li>Bovendien wordt gecontroleerd of elk bestand van de bronmappen in het archief staat.</li>
 </ul>
 <p>Het resultaatvenster toont dan bijvoorbeeld „Controle geslaagd: 1.234 bestanden, 4,2 GB”.
 Is de controle niet geslaagd, dan worden de ontbrekende bestanden genoemd en vindt een gekozen
 verwijdering van de bron niet plaats.</p>
+<p>Bij ISO-bestanden telt de eindmelding van <code>oscdimg.exe</code>. SmartPack zet die in het
+log, samen met het aantal bestanden dat oscdimg.exe heeft gelezen. Is dat aantal lager dan de
+eigen telling, dan wijst het resultaatvenster daarop.</p>
 </div>
 <div class="card">
 <h3>Vergrendelde en onleesbare bestanden</h3>

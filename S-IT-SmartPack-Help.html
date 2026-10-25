@@ -113,8 +113,8 @@ archives and ISO files alike.</li>
 by the Windows user who stored it, and only on this PC. This applies to the speed dial only:
 the archive itself can be extracted on any PC with the password.</li>
 <li><b>Verify result:</b> On request every archive is read completely and every file is checked
-against its checksum. For archives and ISO files SmartPack also checks that every file of the
-source folders is included.</li>
+against its checksum; it is also checked that every file of the source folders is included. For
+ISO files SmartPack compares the number of files read.</li>
 <li><b>Locked and unreadable files:</b> They are skipped and the operation carries on. At the end
 the result window lists them by type, with a pointer to S-IT-SSD-Check for unreadable files.</li>
 <li><b>Checks before starting:</b> free space, the 4 GB limit of FAT32, a destination folder
@@ -149,8 +149,12 @@ most 32 characters. Umlauts are transcribed for it.</li>
 </div>
 <p><b>Several source folders:</b> They are first copied into a staging folder, which is deleted
 afterwards. SmartPack prefers the fast system drive if there is enough space, otherwise the
-destination folder. Its location is shown above the progress bar during the run, for example
-“Staging folder on C:\”.</p>
+destination drive – in each case directly at the top level with a short name, for example
+<code>C:\_SP12345</code>. This way the paths inside are no longer than at the original. Its
+location is shown above the progress bar during the run, for example “Staging folder on C:\”.</p>
+<p class="note">For technical reasons: Windows allows at most 259 characters for a path. If a path
+in the staging folder would be longer, SmartPack reports this before copying and names the file
+concerned. A single source folder needs no staging folder; neither do 7z and ZIP archives.</p>
 <p><b>Checked before starting:</b> If the destination drive is formatted with FAT32 and the source
 is larger than 4 GB, a notice appears – FAT32 does not allow larger files. SmartPack also checks
 for enough free space. If a file with the same name already exists in the destination folder,
@@ -231,6 +235,9 @@ is not available.</li>
 </ul>
 </div>
 <p>Without a speed dial, a password is entered via the <span class="ui">Password</span> tick.</p>
+<p class="note">For technical reasons: with very large ISO files, 7-Zip sometimes cannot read the
+content. SmartPack then reports this instead of extracting incompletely. A double-click on the
+ISO file in Explorer mounts it as a drive; the files can be copied from there.</p>
 
 <h2 id="wipe">Secure delete</h2>
 <p>This page deletes folders and files so that they cannot be recovered – such as old ISO, 7z
@@ -259,16 +266,19 @@ on such storage.</p>
 <div class="card">
 <h3>Verify result</h3>
 <p>The tick <span class="ui">Verify the result after creating it</span> in the settings applies
-to ISO, archive and speed dial:</p>
+to 7z and ZIP archives, including speed dial:</p>
 <ul>
 <li>Archives are read completely; every file is checked against its checksum. This takes about
 as long as extracting once.</li>
-<li>For archives and ISO files SmartPack also checks that every file of the source folders is
-included in the result. For ISO files this takes only seconds.</li>
+<li>In addition, SmartPack checks that every file of the source folders is included in the
+archive.</li>
 </ul>
 <p>The result window then shows, for example, “Verification passed: 1,234 files, 4.2 GB”. If the
 verification fails, the missing files are listed and a selected deletion of the source does not
 take place.</p>
+<p>For ISO files the final message of <code>oscdimg.exe</code> counts. SmartPack writes it to the
+log together with the number of files oscdimg.exe has read. If this number is lower than its own
+count, the result window points this out.</p>
 </div>
 <div class="card">
 <h3>Locked and unreadable files</h3>
